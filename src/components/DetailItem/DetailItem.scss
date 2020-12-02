@@ -1,0 +1,15 @@
+.detail-item-container {
+  padding: 9rem 4rem 3rem;
+
+  .item-info-wrapper {
+    display: flex;
+
+    .img-item-container {
+      width: 30rem;
+
+      img {
+        width: 30rem;
+      }
+    }
+  }
+}
