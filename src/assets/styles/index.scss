@@ -17,3 +17,15 @@ html {
   color: $color-black;
   background-color: #fefefe;
 }
+
+@media (max-width: 768px) {
+  html {
+    font-size: 50%;
+  }
+}
+
+@media (max-width: 481px) {
+  html {
+    font-size: 47.5%;
+  }
+}
