@@ -118,3 +118,21 @@
   }
 }
 
+
+@media (max-width:768px) {
+  .detail-container {
+    .detail-main-container {
+      .detail-item-container {
+        padding: 9rem 4rem 3rem;
+        .item-info-wrapper {
+          flex-direction: column;
+
+          .info-item-container {
+            margin-top: 4rem;
+            margin-left: 0;
+          }
+        }
+      }
+    }
+  }
+}
