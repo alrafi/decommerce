@@ -1,60 +1,56 @@
 @import '../../assets/styles/color.scss';
 
 .home-container {
-  min-height: 100vh;
-
-  .loading-spinner {
-    position: relative;
-    left: 50%;
-    top: 50vh;
-    transform: translate(-50%, -50%);
-  }
-
-  main {
-    padding: 9rem 4rem 3rem;
-
-    .featured-container {
-      width: 100%;
-      height: 38rem;
-      background: linear-gradient(to right, #000, transparent 50%, transparent), url('https://images.unsplash.com/photo-1559563458-527698bf5295?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1500&q=80');
-      background-size: cover;
-      background-repeat: no-repeat;
-      background-position: center center; 
-      padding: 10rem 0 0 3rem;
-
-      h1 {
-        font-size: 3.6rem;
-        color: #fefefe;
+  .main-container {
+    min-height: 100vh;
+  
+    main {
+      padding: 9rem 4rem 3rem;
+  
+      .featured-container {
+        width: 100%;
+        height: 38rem;
+        background: linear-gradient(to right, #000, transparent 50%, transparent), url('https://images.unsplash.com/photo-1559563458-527698bf5295?ixlib=rb-1.2.1&ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&auto=format&fit=crop&w=1500&q=80');
+        background-size: cover;
+        background-repeat: no-repeat;
+        background-position: center center; 
+        padding: 10rem 0 0 3rem;
+        margin-bottom: 5rem;
+  
+        h1 {
+          font-size: 3.6rem;
+          color: #fefefe;
+          text-transform: uppercase;
+          font-weight: 300;
+        }
+  
+        p {
+          font-size: 7.6rem;
+          color: #fefefe;
+        }
+      }
+  
+      .category-container {
+        width: 100%;
+        height: 10rem;
+        background-color: greenyellow;
+        margin: 2rem 0 4rem;
+      }
+  
+      h2 {
+        font-size: 2.4rem;
         text-transform: uppercase;
         font-weight: 300;
       }
-
-      p {
-        font-size: 7.6rem;
-        color: #fefefe;
+    
+      .collection-container {
+        width: 100%;
+        margin-top: 2rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
       }
     }
-
-    .category-container {
-      width: 100%;
-      height: 10rem;
-      background-color: greenyellow;
-      margin: 2rem 0 4rem;
-    }
-
-    h2 {
-      font-size: 2.4rem;
-      text-transform: uppercase;
-      font-weight: 300;
-    }
-  
-    .collection-container {
-      width: 100%;
-      // background-color: $color-grey;
-      margin-top: 2rem;
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-between;
-    }
   }
+
 }

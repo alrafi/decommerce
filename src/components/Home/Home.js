@@ -1,13 +1,22 @@
 import React, { useEffect, useState } from 'react';
 import './Home.scss'
-// import { Link } from 'react-router-dom'
 import Collection from '../Collection/Collection';
 import Header from '../Header/Header';
 import store from '../../api/store'
-import spinner from '../../assets/img/spinner.svg'
+import Footer from '../Footer/Footer';
+import LoadingSpinner from '../LoadingSpinner/LoadingSpinner';
 
 const Home = () => {
   const [products, setProducts] = useState([])
+  const [totalCart, setTotalCart] = useState(0)
+
+  useEffect(() => {
+    const getCart = async () => {
+      const listCart = await JSON.parse(localStorage.getItem("listCart"))
+      setTotalCart(listCart ? listCart.length : 0)
+    }
+    getCart()
+  }, [])
 
   useEffect(() => {
     const getProducts = async () => {
@@ -24,23 +33,25 @@ const Home = () => {
 
   return (
     <div className="home-container">
-      <Header />
-      {
-        products.length === 0 ?
-          <img src={spinner} alt="" className="loading-spinner" />
-          :
-          <main>
-            <div className="featured-container">
-              <h1>Holiday Deals</h1>
-              <p>50% OFF</p>
-            </div>
-            <div className="category-container"></div>
-            <h2>Most Popular</h2>
-            <div className="collection-container">
-              <Collection items={products} />
-            </div>
-          </main>
-      }
+      <Header cart={totalCart} />
+      <div className="main-container">
+        {
+          products.length === 0 ?
+            <LoadingSpinner />
+            :
+            <main>
+              <div className="featured-container">
+                <h1>Holiday Deals</h1>
+                <p>50% OFF</p>
+              </div>
+              <h2>Most Popular</h2>
+              <div className="collection-container">
+                <Collection items={products} />
+              </div>
+            </main>
+        }
+      </div>
+      <Footer />
     </div>
   );
 };

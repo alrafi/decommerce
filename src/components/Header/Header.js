@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom'
 import icon from '../../assets/img/icon-decommerce.svg'
 import iconCart from '../../assets/img/icon-cart.svg'
 
-const Header = () => {
+const Header = ({ cart }) => {
   return (
     <header className="header-container">
       <div className="header-wrapper">
@@ -16,7 +16,7 @@ const Header = () => {
         </Link>
         <nav>
           <img src={iconCart} alt="" className="cart" />
-          <div className="cart-count">0</div>
+          <div className="cart-count">{cart}</div>
         </nav>
         <div className="nav-menu">
           <img src="" alt="" />
